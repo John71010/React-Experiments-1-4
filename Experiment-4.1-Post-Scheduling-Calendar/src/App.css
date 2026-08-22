@@ -1,0 +1,58 @@
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef3f9;
+}
+
+.container{
+
+    width:90%;
+    margin:auto;
+    padding:30px;
+
+}
+
+h1{
+
+    text-align:center;
+    color:#2c3e50;
+    margin-bottom:30px;
+
+}
+
+.fc{
+
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+.fc-toolbar-title{
+
+    color:#1565c0;
+    font-size:28px;
+
+}
+
+.fc-button{
+
+    background:#1565c0 !important;
+    border:none !important;
+
+}
+
+.fc-button:hover{
+
+    background:#0d47a1 !important;
+
+}
+
+.fc-daygrid-event{
+
+    background:#26a69a !important;
+    border:none !important;
+    padding:5px;
+
+}

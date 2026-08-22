@@ -1,0 +1,617 @@
+/* ============================================
+   POST COMPOSER - MAIN STYLES
+   ============================================ */
+
+.post-composer {
+  position: relative;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+}
+
+/* ============================================
+   SUCCESS TOAST
+   ============================================ */
+
+.success-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #16A34A;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  animation: slideIn 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   COMPOSER HEADER
+   ============================================ */
+
+.composer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.composer-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+.platform-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   EDITING BANNER (FIX 5)
+   ============================================ */
+
+.editing-banner {
+  background: #FFFBEB;
+  border: 1px solid #F59E0B;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #92400E;
+  font-size: 0.95rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-cancel-edit {
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  padding: 4px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-cancel-edit:hover {
+  background: #FEE2E2;
+  transform: scale(1.05);
+}
+
+/* ============================================
+   PLATFORM SELECTOR
+   ============================================ */
+
+.platform-selector {
+  margin-bottom: 24px;
+}
+
+.selector-label {
+  display: block;
+  font-weight: 500;
+  color: #6B7280;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.platform-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.platform-btn {
+  padding: 8px 16px;
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.platform-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.platform-btn.active {
+  border-color: #2563EB;
+  background: #EFF6FF;
+}
+
+.platform-icon {
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   TEXT AREA
+   ============================================ */
+
+.text-area-container {
+  margin-bottom: 20px;
+}
+
+.text-area {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+  min-height: 120px;
+  box-sizing: border-box;
+}
+
+.text-area:focus {
+  outline: none;
+  border-color: #2563EB;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.text-area-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #6B7280;
+}
+
+.char-counter .over-limit {
+  color: #DC2626;
+  font-weight: 600;
+}
+
+.char-counter .near-limit {
+  color: #F59E0B;
+  font-weight: 500;
+}
+
+.error-text {
+  color: #DC2626;
+  font-weight: 600;
+}
+
+.warning-text {
+  color: #F59E0B;
+  font-weight: 500;
+}
+
+.char-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #E5E7EB;
+  border-radius: 2px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #16A34A;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.progress-fill.warning {
+  background: #F59E0B;
+}
+
+.progress-fill.error {
+  background: #DC2626;
+}
+
+/* ============================================
+   MEDIA UPLOADER
+   ============================================ */
+
+.media-uploader {
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+}
+
+.uploader-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+.uploader-limit {
+  color: #6B7280;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.upload-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.photo-thumbnail {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+}
+
+.photo-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-photo {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.remove-photo:hover {
+  background: #DC2626;
+  transform: scale(1.1);
+}
+
+.drop-zone {
+  width: 120px;
+  height: 80px;
+  border: 2px dashed #E5E7EB;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.drop-zone:hover {
+  border-color: #2563EB;
+  background: #F8FAFC;
+}
+
+.drop-zone.active {
+  border-color: #2563EB;
+  background: #EFF6FF;
+}
+
+.drop-zone-content {
+  text-align: center;
+  padding: 8px;
+}
+
+.drop-icon {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.drop-zone-content p {
+  margin: 4px 0;
+  font-size: 0.8rem;
+  color: #1A1A1A;
+}
+
+.drop-hint {
+  font-size: 0.7rem;
+  color: #6B7280;
+}
+
+.uploader-stats {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #6B7280;
+}
+
+.photo-count {
+  font-weight: 500;
+}
+
+/* ============================================
+   VALIDATION PANEL
+   ============================================ */
+
+.validation-panel {
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #E5E7EB;
+}
+
+.validation-panel.valid {
+  background: #F0FDF4;
+  border-color: #86EFAC;
+}
+
+.validation-panel.invalid {
+  background: #FEF2F2;
+  border-color: #FECACA;
+}
+
+.validation-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.validation-icon {
+  font-size: 1.1rem;
+}
+
+.validation-title {
+  font-size: 0.95rem;
+  color: #1A1A1A;
+}
+
+.validation-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.validation-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 0.9rem;
+}
+
+.validation-item.error {
+  color: #DC2626;
+}
+
+.validation-item.warning {
+  color: #F59E0B;
+}
+
+.item-icon {
+  font-size: 0.9rem;
+}
+
+.validation-stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.stat-item {
+  font-size: 0.85rem;
+  color: #6B7280;
+}
+
+.stat-label {
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.stat-value {
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.stat-value.error {
+  color: #DC2626;
+}
+
+/* ============================================
+   COMPOSER ACTIONS (BUTTONS)
+   ============================================ */
+
+.composer-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #2563EB;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #1D4ED8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:disabled {
+  background-color: #9CA3AF;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btn-secondary {
+  background-color: #F3F4F6;
+  color: #1A1A1A;
+  border: 1px solid #E5E7EB;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #E5E7EB;
+}
+
+.btn-danger {
+  background-color: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #FEE2E2;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   COMPOSER FOOTER
+   ============================================ */
+
+.composer-footer {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.composer-footer.error {
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+}
+
+.composer-footer.success {
+  background: #F0FDF4;
+  color: #16A34A;
+  border: 1px solid #86EFAC;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .post-composer {
+    padding: 16px;
+  }
+
+  .composer-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .composer-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .platform-buttons {
+    gap: 6px;
+  }
+
+  .platform-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .composer-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .upload-area {
+    flex-direction: column;
+  }
+
+  .photo-thumbnail {
+    width: 100%;
+    height: 150px;
+  }
+
+  .drop-zone {
+    width: 100%;
+    height: 100px;
+  }
+
+  .validation-stats {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* Editing Banner Responsive */
+  .editing-banner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .btn-cancel-edit {
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
