@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f6f8fc;
+  color: #1f2937;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 35px 20px;
+}
+
+/* Main container */
+.container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #6c63ff, #8b7cff);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.18);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.header p {
+  margin: 8px 0 0;
+  opacity: 0.9;
+}
+
+/* Grid layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 25px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(31, 41, 55, 0.07);
+  border: 1px solid #edf0f6;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+/* Form */
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dfe3eb;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #fafbff;
+  color: #1f2937;
+  transition: 0.2s;
+}
+
+input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+  background: white;
+}
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+button {
+  border: none;
+  padding: 11px 17px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.buttons button:first-child {
+  background: #6c63ff;
+  color: white;
+  flex: 1;
+}
+
+.buttons button:first-child:hover {
+  background: #584ff0;
+  transform: translateY(-1px);
+}
+
+button.cancel {
+  background: #eef0f5;
+  color: #4b5563;
+}
+
+button.cancel:hover {
+  background: #e2e5ec;
+}
+
+/* Messages */
+.success {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #ecfdf3;
+  color: #16803c;
+  font-size: 14px;
+}
+
+.error {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #c2414d;
+  font-size: 14px;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 13px;
+  font-size: 13px;
+  color: #6b7280;
+  background: #f8f9fc;
+}
+
+td {
+  padding: 14px 13px;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background: #fafaff;
+}
+
+/* Action buttons */
+.edit {
+  background: #eef2ff;
+  color: #5b55d6;
+  margin-right: 7px;
+}
+
+.edit:hover {
+  background: #e1e5ff;
+}
+
+.delete {
+  background: #fff0f1;
+  color: #d34b59;
+}
+
+.delete:hover {
+  background: #ffe1e4;
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  padding: 30px;
+  color: #9ca3af;
+}
+
+/* Student count */
+.student-count {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 6px 11px;
+  border-radius: 20px;
+  background: #f0efff;
+  color: #6259dc;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .app {
+    padding: 20px 12px;
+  }
+
+  .header {
+    padding: 22px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  th,
+  td {
+    padding: 9px;
+    font-size: 12px;
+  }
+}
+.monitoring-card {
+  margin-top: 25px;
+}
+
+.monitoring-text {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.test-button {
+  margin-top: 18px;
+  width: 100%;
+  background: #6c63ff;
+  color: white;
+}
+
+.test-button:hover {
+  background: #584ff0;
+}
+
+.api-error {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #fff1f2;
+  border-left: 4px solid #e05260;
+  color: #9f2735;
+}
+
+.api-success {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #ecfdf3;
+  border-left: 4px solid #22a05a;
+  color: #176b3a;
+}
+
+.api-error p,
+.api-success p {
+  margin: 7px 0;
+}

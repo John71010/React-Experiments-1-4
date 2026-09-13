@@ -4,3 +4,13 @@ build/
 .env.local
 .DS_Store
 npm-debug.log*
+# Spring Boot / Maven
+**/target/
+
+# React / Vite
+**/node_modules/
+**/dist/
+
+# IDE / logs
+.vscode/
+*.log
